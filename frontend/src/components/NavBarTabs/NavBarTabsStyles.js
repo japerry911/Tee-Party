@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     color: '#FFF',
     opacity: 1,
     fontSize: '0.75rem',
-    minWidth: '10%',
+    minWidth: '12%',
     transition: '350ms ease-in',
     borderRadius: 2,
     '&:hover': {

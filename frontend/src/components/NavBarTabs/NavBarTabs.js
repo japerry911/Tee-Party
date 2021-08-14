@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { routesArray } from '../../router/RouterMisc';
+import { routesArray, nonNormalRouteNames } from '../../router/RouterMisc';
 import { Link } from 'react-router-dom';
 import { useStyles } from './NavBarTabsStyles';
 
@@ -13,7 +13,9 @@ const NavBarTabs = ({ value }) => {
     <Fragment>
       <Tabs value={value} className={classes.mainDivStyle}>
         {routesArray
-          .filter((routeObject) => routeObject.name !== 'Login')
+          .filter(
+            (routeObject) => !nonNormalRouteNames.includes(routeObject.name)
+          )
           .map((routeObject, index) => (
             <Tab
               key={`${routeObject.name}-${index}`}
