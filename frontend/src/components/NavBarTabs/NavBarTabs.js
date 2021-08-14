@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { routesArray } from '../../router/RouterMisc';
+import Divider from '@material-ui/core/Divider';
+import { routesArray, nonNormalRouteNames } from '../../router/RouterMisc';
 import { Link } from 'react-router-dom';
 import { useStyles } from './NavBarTabsStyles';
 
@@ -13,7 +14,9 @@ const NavBarTabs = ({ value }) => {
     <Fragment>
       <Tabs value={value} className={classes.mainDivStyle}>
         {routesArray
-          .filter((routeObject) => routeObject.name !== 'Login')
+          .filter(
+            (routeObject) => !nonNormalRouteNames.includes(routeObject.name)
+          )
           .map((routeObject, index) => (
             <Tab
               key={`${routeObject.name}-${index}`}
@@ -38,6 +41,25 @@ const NavBarTabs = ({ value }) => {
           }
           className={classes.tabStyle}
           style={{ marginLeft: 'auto' }}
+        />
+        <Tab
+          style={{ minWidth: '10px', opacity: 1 }}
+          label=''
+          icon={
+            <Divider
+              orientation='vertical'
+              flexItem
+              className={classes.dividerStyle}
+            />
+          }
+          disabled
+        />
+        <Tab
+          key='sign-up-5'
+          component={Link}
+          to='/sign-up'
+          label='Sign Up'
+          className={classes.tabStyle}
         />
       </Tabs>
     </Fragment>
