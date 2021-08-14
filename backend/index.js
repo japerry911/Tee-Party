@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const app = require('./app');
+const posts = require('./routes/postsRoutes');
+const topics = require('./routes/topicsRoutes');
+const users = require('./routes/usersRoutes');
 
 dotenv.config({ path: './config.env' });
+
+app.use('/api/posts', posts);
+app.use('/api/topics', topics);
+app.use('/api/users', users);
 
 const DB = process.env.DB_CONNECTION_STRING.replace(
   '<PASSWORD>',
