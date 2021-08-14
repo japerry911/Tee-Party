@@ -1,11 +1,15 @@
 import Routes from './router/Routes';
+import theme from './theme/theme';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 const App = () => {
   return (
     <div style={{ height: '100%' }}>
-      <main>
-        <Routes />
-      </main>
+      <ThemeProvider theme={theme}>
+        <main>
+          <Routes />
+        </main>
+      </ThemeProvider>
     </div>
   );
 };
