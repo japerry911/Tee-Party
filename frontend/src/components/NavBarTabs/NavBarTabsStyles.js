@@ -24,4 +24,10 @@ export const useStyles = makeStyles((theme) => ({
     height: '40px',
     minHeight: '0px',
   },
+  dividerStyle: {
+    backgroundColor: theme.palette.secondary.main,
+    height: '1.25rem',
+    alignSelf: 'center',
+    width: '2px',
+  },
 }));
