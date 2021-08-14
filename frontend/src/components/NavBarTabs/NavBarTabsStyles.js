@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     color: '#FFF',
     opacity: 1,
     fontSize: '0.75rem',
-    minWidth: '10%',
+    minWidth: '12%',
     transition: '350ms ease-in',
     borderRadius: 2,
     '&:hover': {
@@ -23,5 +23,11 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: 'auto',
     height: '40px',
     minHeight: '0px',
+  },
+  dividerStyle: {
+    backgroundColor: theme.palette.secondary.main,
+    height: '1.25rem',
+    alignSelf: 'center',
+    width: '2px',
   },
 }));
