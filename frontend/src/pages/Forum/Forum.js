@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from '@material-ui/core/styles/makeStyles';
+import { useStyles } from './ForumStyles';
 
 const Forum = () => {
   const classes = useStyles();

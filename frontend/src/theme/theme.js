@@ -6,13 +6,14 @@ let theme = createTheme({
       main: '#048ABF',
     },
     secondary: {
-      main: '#49731F',
+      main: '#FFF',
     },
   },
   colors: {
     darkBlue: '#03658C',
     lightGreen: '#98A62E',
     sandColor: '#F2C84B',
+    darkGreen: '#49731F',
   },
   fonts: {
     arial: 'Arial',
