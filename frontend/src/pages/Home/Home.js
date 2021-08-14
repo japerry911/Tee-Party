@@ -5,7 +5,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.mainDivStyle}>
       <h1>Home Page</h1>
     </div>
   );
