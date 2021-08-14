@@ -3,4 +3,5 @@ export const routesArray = [
   { name: 'About', link: '/about', index: 1 },
   { name: 'Forum', link: '/forum', index: 2 },
   { name: 'Contact', link: '/contact', index: 3 },
+  { name: 'Login', link: '/login', index: 4 },
 ];

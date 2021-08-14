@@ -7,12 +7,13 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
   },
   logoImageStyle: {
-    height: '6rem',
-    padding: '0.5rem 0',
+    height: '4rem',
+    paddingTop: '0.5rem',
   },
   toolbarStyle: {
     display: 'flex',
-    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    paddingBottom: '0.25rem',
   },
   logoButtonContainerStyle: {
     padding: 0,
