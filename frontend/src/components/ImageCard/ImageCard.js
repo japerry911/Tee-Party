@@ -13,6 +13,8 @@ const Card = (props) => {
     btnText,
     italicizeBody,
     verticalCenter,
+    widthAdj,
+    marginAdj,
   } = props;
 
   const classes = useStyles({ imgUrl });
@@ -31,11 +33,15 @@ const Card = (props) => {
       direction='column'
       className={classes.mainGridStyle}
       alignItems='center'
+      style={{
+        width: widthAdj ? widthAdj : null,
+        margin: marginAdj ? marginAdj : null,
+      }}
       justifyContent={verticalCenter ? 'center' : 'space-evenly'}
     >
       <Grid item>
         <Typography
-          variant='h3'
+          variant='h5'
           style={{
             color: 'white',
             fontFamily: theme.fonts.futuraBold,
