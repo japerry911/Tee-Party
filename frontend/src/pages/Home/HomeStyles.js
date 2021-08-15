@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   cardGridStyles: {
-    width: '20%',
+    width: '25%',
   },
   stepUpTextStyle: {
     fontFamily: theme.fonts.futuraBold,

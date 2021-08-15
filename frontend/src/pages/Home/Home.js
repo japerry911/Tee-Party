@@ -19,15 +19,16 @@ const Home = () => {
       <Grid
         item
         container
-        style={{ padding: '5rem 2rem', minHeight: '30rem' }}
-        justifyContent='space-between'
+        style={{ padding: '5rem 2rem', minHeight: '50rem' }}
+        justifyContent='space-around'
+        alignItems='flex-start'
       >
         <Grid
           item
           container
           direction='column'
           className={classes.cardGridStyles}
-          style={{ paddingRight: '14.7%' }}
+          style={{ paddingRight: '8.8%' }}
         >
           <Grid item>
             <Typography
@@ -48,7 +49,7 @@ const Home = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item container style={{ width: '50%' }}>
+        <Grid item container style={{ width: '40%' }}>
           <ImageCard
             imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/Enhance+Your+Golf+Game.jpg_2.jpg'
             headerText='Enhance Your Golf Game'
@@ -65,6 +66,12 @@ const Home = () => {
           />
         </Grid>
       </Grid>
+      <Grid
+        item
+        container
+        justifyContent='space-between'
+        style={{ minHeight: '50rem' }}
+      ></Grid>
     </Grid>
   );
 };
