@@ -9,9 +9,10 @@ const HeroHeader = (props) => {
   const classes = useStyles({ imgUrl });
 
   return (
-    <div className={classes.mainDivStyle}>
+    <Grid container item className={classes.mainDivStyle}>
       <Grid
         container
+        item
         className={classes.mainGridContainerStyle}
         direction='column'
         justifyContent='center'
@@ -34,7 +35,7 @@ const HeroHeader = (props) => {
           </Grid>
         ) : null}
       </Grid>
-    </div>
+    </Grid>
   );
 };
 

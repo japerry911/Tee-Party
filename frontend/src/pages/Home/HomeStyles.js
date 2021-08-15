@@ -5,5 +5,15 @@ export const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
+    padding: 0,
+    margin: 0,
+    width: '100%',
+  },
+  cardGridStyles: {
+    width: '33.333%',
+  },
+  stepUpTextStyle: {
+    fontFamily: theme.fonts.futuraBold,
+    color: theme.palette.primary.main,
   },
 }));
