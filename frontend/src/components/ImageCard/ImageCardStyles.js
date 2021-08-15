@@ -5,6 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundImage: (props) =>
       `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${props.imgUrl})`,
     backgroundSize: 'cover',
+    height: '100%',
   },
   buttonStyle: {
     backgroundColor: theme.palette.primary.main,
