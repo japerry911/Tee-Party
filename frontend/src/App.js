@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Routes from './router/Routes';
 import theme from './theme/theme';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 import { routesArray } from './router/RouterMisc';
 import { findIndex } from './misc/helpers';
 import { useLocation } from 'react-router-dom';
@@ -17,12 +18,24 @@ const App = () => {
   }, [location]);
 
   return (
-    <div style={{ height: '100%' }}>
+    <div
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+    >
       <ThemeProvider theme={theme}>
-        <main>
+        <header>
           <NavBar value={value} />
+        </header>
+        <main>
           <Routes />
         </main>
+        <footer style={{ height: '8rem' }}>
+          <Footer value={value} />
+        </footer>
       </ThemeProvider>
     </div>
   );
