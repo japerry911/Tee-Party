@@ -35,20 +35,28 @@ export const californiaSlides = [
       'https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/golf-courses/california/06.jpg',
     description: 'San Francisco',
   },
-  { name: '7. Spyglass Hill G.C.', imgUrl: '', description: 'Pebble Beach' },
+  {
+    name: '7. Spyglass Hill G.C.',
+    imgUrl:
+      'https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/golf-courses/california/07.jpg',
+    description: 'Pebble Beach',
+  },
   {
     name: '8. Monterey Peninsula C.C (Shore)',
-    imgUrl: '',
+    imgUrl:
+      'https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/golf-courses/california/08.jpg',
     description: 'Pebble Beach',
   },
   {
     name: '9. Monterey Peninsula (Dunes)',
-    imgUrl: '',
+    imgUrl:
+      'https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/golf-courses/california/09.jpg',
     description: 'Pebble Beach',
   },
   {
     name: '10. The Valley C. of Montecito',
-    imgUrl: '',
+    imgUrl:
+      'https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/golf-courses/california/10.jpg',
     description: 'Montecito',
   },
 ];
