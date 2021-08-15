@@ -16,4 +16,11 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: theme.fonts.futuraBold,
     color: theme.palette.primary.main,
   },
+  gridContainerMidHeightStyle: {
+    minHeight: '30rem',
+    marginTop: '3rem',
+  },
+  wideCardGridStyles: {
+    width: '33%',
+  },
 }));

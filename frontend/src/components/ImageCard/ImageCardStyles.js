@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles((theme) => ({
   mainGridStyle: {
     backgroundImage: (props) =>
-      `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${props.imgUrl})`,
+      `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(${props.imgUrl})`,
     backgroundSize: 'cover',
     height: '25rem',
   },

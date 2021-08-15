@@ -4,10 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import ImageCard from '../../components/ImageCard/ImageCard';
 import TextCard from '../../components/TextCard/TextCard';
+import useTheme from '@material-ui/core/styles/useTheme';
 import { useStyles } from './HomeStyles';
 
 const Home = () => {
   const classes = useStyles();
+
+  const theme = useTheme();
 
   return (
     <Grid container className={classes.mainDivStyle}>
@@ -19,9 +22,10 @@ const Home = () => {
       <Grid
         item
         container
-        style={{ padding: '5rem 2rem', minHeight: '50rem' }}
+        style={{ paddingLeft: '2rem', paddingRight: '2rem' }}
         justifyContent='space-around'
         alignItems='flex-start'
+        className={classes.gridContainerMidHeightStyle}
       >
         <Grid
           item
@@ -70,7 +74,39 @@ const Home = () => {
         item
         container
         justifyContent='space-between'
-        style={{ minHeight: '50rem' }}
+        className={classes.gridContainerMidHeightStyle}
+        style={{ backgroundColor: theme.colors.sandColor }}
+        alignItems='center'
+      >
+        <Grid item container className={classes.wideCardGridStyles}>
+          <ImageCard
+            imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/Find+your+golf+group.jpg_2.jpg'
+            headerText='Find your new golf group.'
+            bodyText='Use our forum to connect with like-minded golfers.'
+            italicizeBody
+          />
+        </Grid>
+        <Grid item container className={classes.wideCardGridStyles}>
+          <ImageCard
+            imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/world+class+golf+courses.jpg_2.jpg'
+            headerText='World-class golf courses.'
+            bodyText='Find your favorite course. Anytime, anywhere.'
+            italicizeBody
+          />
+        </Grid>
+        <Grid item container className={classes.wideCardGridStyles}>
+          <ImageCard
+            imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/Play+smarter.jpg_2.jpg'
+            headerText='Play Smarter. Level Up.'
+            bodyText='Gain access to the latest tips and trends.'
+            italicizeBody
+          />
+        </Grid>
+      </Grid>
+      <Grid
+        item
+        container
+        className={classes.gridContainerMidHeightStyle}
       ></Grid>
     </Grid>
   );

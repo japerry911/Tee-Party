@@ -6,7 +6,7 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import { useStyles } from './ImageCardStyles';
 
 const Card = (props) => {
-  const { imgUrl, headerText, bodyText, btnText } = props;
+  const { imgUrl, headerText, bodyText, btnText, italicizeBody } = props;
 
   const classes = useStyles({ imgUrl });
   const theme = useTheme();
@@ -42,6 +42,7 @@ const Card = (props) => {
             color: 'white',
             fontFamily: theme.fonts.arial,
             fontWeight: 'bold',
+            fontStyle: italicizeBody ? 'italic' : 'normal',
           }}
           align='center'
         >
