@@ -8,6 +8,7 @@ import ScrollToTop from './ScrollToTop';
 import GolfCourses from '../pages/GolfCourses/GolfCourses';
 import Login from '../pages/Login/Login';
 import SignUp from '../pages/SignUp/SignUp';
+import CaliforniaGolfCourses from '../pages/CaliforniaGolfCourses/CaliforniaGolfCourses';
 
 const Routes = () => {
   return (
@@ -20,6 +21,11 @@ const Routes = () => {
       <Route exact path='/golf-courses' component={GolfCourses} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/sign-up' component={SignUp} />
+      <Route
+        exact
+        path='/golf-courses/california'
+        component={CaliforniaGolfCourses}
+      />
     </Fragment>
   );
 };
