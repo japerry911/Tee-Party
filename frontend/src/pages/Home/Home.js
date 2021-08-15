@@ -5,6 +5,8 @@ import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import ImageCard from '../../components/ImageCard/ImageCard';
 import TextCard from '../../components/TextCard/TextCard';
 import useTheme from '@material-ui/core/styles/useTheme';
+import Divider from '@material-ui/core/Divider';
+import AvatarCard from '../../components/AvatarCard/AvatarCard';
 import { useStyles } from './HomeStyles';
 
 const Home = () => {
@@ -107,7 +109,64 @@ const Home = () => {
         item
         container
         className={classes.gridContainerMidHeightStyle}
-      ></Grid>
+        direction='column'
+        alignItems='center'
+        style={{ marginBottom: '10rem' }}
+      >
+        <Grid item style={{ width: '25%' }}>
+          <Typography
+            variant='h3'
+            align='center'
+            style={{
+              fontFamily: theme.fonts.futuraBold,
+              color: theme.palette.primary.main,
+              fontWeight: 'bold',
+              width: '100%',
+            }}
+            paragraph
+          >
+            Why Tee Time?
+          </Typography>
+        </Grid>
+        <Grid item style={{ width: '25%' }}>
+          <Divider className={classes.dividerStyle} />
+        </Grid>
+        <Grid
+          item
+          container
+          style={{ width: '100%', marginTop: '3rem' }}
+          justifyContent='space-evenly'
+        >
+          <Grid item container className={classes.cardGridStyles}>
+            <AvatarCard
+              imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/Gary+M_.jpg'
+              headerText='Gary M.'
+              subtitleText='Mission Viejo, CA'
+              bodyText='"With Tee Time, I not only found a community, I became a better player. Thank you for helping me find my passion!"'
+              italicizeBody
+              xLargeImg
+            />
+          </Grid>
+          <Grid item container className={classes.cardGridStyles}>
+            <AvatarCard
+              imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/Jack+P.jpg'
+              headerText='Jack P.'
+              subtitleText='Denver, CO'
+              bodyText='"My golf game has never been better. I now have access to the latest tips and tricks to help me step up my game every day."'
+              italicizeBody
+            />
+          </Grid>
+          <Grid item container className={classes.cardGridStyles}>
+            <AvatarCard
+              imgUrl='https://tee-party-1243912491248032048023.s3.us-east-2.amazonaws.com/home/CAthy+P.jpg'
+              headerText='Cath P.'
+              subtitleText='Omaha, NE'
+              bodyText='"Tee Time is my stop shop for all things golf--from meeting new golf groups to learning more about courses, this is the place for golf lovers!"'
+              italicizeBody
+            />
+          </Grid>
+        </Grid>
+      </Grid>
     </Grid>
   );
 };

@@ -23,4 +23,9 @@ export const useStyles = makeStyles((theme) => ({
   wideCardGridStyles: {
     width: '33%',
   },
+  dividerStyle: {
+    width: '100%',
+    backgroundColor: theme.palette.primary.main,
+    height: '2.5px',
+  },
 }));
