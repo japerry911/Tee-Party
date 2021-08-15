@@ -6,7 +6,14 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import { useStyles } from './ImageCardStyles';
 
 const Card = (props) => {
-  const { imgUrl, headerText, bodyText, btnText, italicizeBody } = props;
+  const {
+    imgUrl,
+    headerText,
+    bodyText,
+    btnText,
+    italicizeBody,
+    verticalCenter,
+  } = props;
 
   const classes = useStyles({ imgUrl });
   const theme = useTheme();
@@ -24,12 +31,16 @@ const Card = (props) => {
       direction='column'
       className={classes.mainGridStyle}
       alignItems='center'
-      justifyContent='space-evenly'
+      justifyContent={verticalCenter ? 'center' : 'space-evenly'}
     >
       <Grid item>
         <Typography
           variant='h3'
-          style={{ color: 'white', fontFamily: theme.fonts.futuraBold }}
+          style={{
+            color: 'white',
+            fontFamily: theme.fonts.futuraBold,
+            paddingBottom: verticalCenter ? '2rem' : 0,
+          }}
           align='center'
         >
           {headerText}

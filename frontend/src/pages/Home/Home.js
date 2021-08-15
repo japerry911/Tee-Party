@@ -11,7 +11,6 @@ import { useStyles } from './HomeStyles';
 
 const Home = () => {
   const classes = useStyles();
-
   const theme = useTheme();
 
   return (
